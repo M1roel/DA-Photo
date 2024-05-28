@@ -47,12 +47,14 @@ function load() {
   }
 }
 
+function closeImg() {
+  const existingImgBigContainer = document.querySelector('.imgBig'); // Prüfe, ob ein imgBig-Container vorhanden ist
+  existingImgBigContainer && existingImgBigContainer.remove(); // Wenn vorhanden, entferne ihn
+}
 
 function openImage(imgSrc) {
   const existingImgBigContainer = document.querySelector('.imgBig'); // Prüfe, ob bereits ein imgBig-Container vorhanden ist
-  if (existingImgBigContainer) {
-    existingImgBigContainer.remove(); // Wenn vorhanden, entferne ihn zuerst
-  }
+  existingImgBigContainer && existingImgBigContainer.remove(); // Wenn vorhanden, entferne ihn zuerst
 
   const imgBigContainer = document.createElement('div'); // Erstelle ein neues Element für den großen Container
   imgBigContainer.classList.add('imgBig');
