@@ -35,17 +35,37 @@ let images = [
 // ===========================================
 
 function load() {
-  const imgContainerElement = document.getElementById("imgContainer");
-  imgContainerElement.innerHTML = "";
+  const imgContainerElement = document.getElementById('imgContainer');
+  imgContainerElement.innerHTML = '';
   for (let i = 0; i < images.length; i++) {
     const img = images[i];
     imgContainerElement.innerHTML += `
-            <div class="imgBox">
+            <div onclick="openImage('${img}')" class="imgBox">
                 <img src="${img}" alt="${i + 1}">
             </div>
         `;
   }
 }
+
+
+function openImage(imgSrc) {
+  const existingImgBigContainer = document.querySelector('.imgBig'); // Prüfe, ob bereits ein imgBig-Container vorhanden ist
+  if (existingImgBigContainer) {
+    existingImgBigContainer.remove(); // Wenn vorhanden, entferne ihn zuerst
+  }
+
+  const imgBigContainer = document.createElement('div'); // Erstelle ein neues Element für den großen Container
+  imgBigContainer.classList.add('imgBig');
+
+  const imgElement = document.createElement('img'); // Erstelle ein neues Bild-Element für das angeklickte Bild
+  imgElement.src = imgSrc;
+
+  imgBigContainer.appendChild(imgElement); // Füge das Bild-Element dem großen Container hinzu
+
+  const imgContainerElement = document.getElementById('imgContainer'); // Füge den großen Container dem imgContainer hinzu
+  imgContainerElement.appendChild(imgBigContainer);
+}
+
 
 // ===========================================
 // Abschnitt: Funktionen zum Rendern der Seite
