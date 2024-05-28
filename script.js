@@ -4,11 +4,19 @@ let images = [
   "img/rockstarter.png",
 ];
 
+// ===========================================
+// Abschnitt: Funktionen zur Datenverarbeitung
+// ===========================================
+
 function load() {
+  const imgContainerElement = document.getElementById("imgContainer");
+  imgContainerElement.innerHTML = "";
   for (let i = 0; i < images.length; i++) {
     const img = images[i];
-    document.getElementById().innerHTML += `
-            <div onclick="openImage(${i})" class="imgBox"></img>
+    imgContainerElement.innerHTML += `
+            <div class="imgBox">
+                <img src="${img}" alt="${i + 1}">
+            </div>
         `;
   }
 }
@@ -24,9 +32,16 @@ function header() {
   headerElement.innerHTML += `<h1>MyPhotoBlog</h1>`; // Neues HTML-Element (H1) zum Header hinzufügen
 }
 
+function imgContainer() {
+  let imgContainerElement = document.getElementById("imgContainer");
+  imgContainerElement.innerHTML = "";
+  load();
+}
+
 // Funktion zum Rendern der Seite
 function render() {
   header(); // Header-Funktion aufrufen
+  imgContainer(); // Img-Funktion aufrufen
 }
 
 // ===========================
