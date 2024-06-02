@@ -1,12 +1,12 @@
 @font-face {
   font-family: "Roboto";
-  src: url("fonts/Roboto-Regular.ttf") format("woff2");
+  src: url("../fonts/Roboto-Regular.ttf") format("woff2");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url("fonts/Roboto-Black.ttf") format("woff2");
+  src: url("../fonts/Roboto-BlackItalic.ttf") format("woff2");
   font-weight: 900;
 }
 
@@ -17,8 +17,8 @@
 
 .imgContainer {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -64,6 +64,9 @@ body {
 }
 
 .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #4660f7;
   color: #fff;
   margin: auto;
