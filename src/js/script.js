@@ -41,6 +41,12 @@ function imgContainer() {
   load();
 }
 
+function arrow() {
+  const arrowLeftPath = "../public/img/arrow-left.png";
+  const arrowRight = "../public/img/arrow-right.png";
+  let bigPicture = document.getElementById('imgBig');
+}
+
 
 function render() {
   imgContainer();
