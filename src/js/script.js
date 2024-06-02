@@ -43,7 +43,6 @@ function imgContainer() {
 
 
 function render() {
-  header();
   imgContainer();
 }
 
