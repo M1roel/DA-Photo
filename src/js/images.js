@@ -23,10 +23,6 @@ let images = [
     "img/22.jpg",
     "img/23.jpg",
     "img/24.jpg",
-    "img/25.jpg",
-    "img/26.png",
-    "img/27.png",
-    "img/28.png",
-    "img/29.jpg",
+    "img/25.jpg"
   ];
   
