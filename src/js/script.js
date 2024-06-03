@@ -12,26 +12,22 @@ function load() {
 }
 
 
-function closeImg() {
-  const existingImgBigContainer = document.querySelector(".imgBig");
-  existingImgBigContainer && existingImgBigContainer.remove();
+function closeImg(event) {
+  const clickedOnBigImage = event.target.id === 'bigImage';
+  
+  if (clickedOnBigImage) {
+    const imgBigContainer = document.getElementById("imgBig");
+    imgBigContainer.classList.add("d-none");
+  }
 }
 
 
 function openImage(imgSrc) {
-  const existingImgBigContainer = document.querySelector(".imgBig");
-  existingImgBigContainer && existingImgBigContainer.remove();
+  const imgBigContainer = document.getElementById("imgBig");
+  const imgElement = document.getElementById("bigImage");
 
-  const imgBigContainer = document.createElement("div");
-  imgBigContainer.classList.add("imgBig");
-
-  const imgElement = document.createElement("img");
   imgElement.src = imgSrc;
-
-  imgBigContainer.appendChild(imgElement);
-
-  const imgContainerElement = document.getElementById("imgContainer");
-  imgContainerElement.appendChild(imgBigContainer);
+  imgBigContainer.classList.remove("d-none");
 }
 
 
@@ -39,12 +35,6 @@ function imgContainer() {
   let imgContainerElement = document.getElementById("imgContainer");
   imgContainerElement.innerHTML = "";
   load();
-}
-
-function arrow() {
-  const arrowLeftPath = "../public/img/arrow-left.png";
-  const arrowRight = "../public/img/arrow-right.png";
-  let bigPicture = document.getElementById('imgBig');
 }
 
 

@@ -53,12 +53,34 @@
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.imgBig img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.bigImage {
   max-width: 90%;
   max-height: 90vh;
+}
+
+.arrow-left, .arrow-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 999;
+}
+
+.arrow-left img, .arrow-right img {
+  height: 40px;
+  width: 40px;
+}
+
+.arrow-left {
+  left: 10px;
+}
+
+.arrow-right {
+  right: 10px;
+}
+
+.d-none {
+  display: none;
 }
 
 html {

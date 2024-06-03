@@ -15,6 +15,16 @@
     <div w3-include-html="../templates/header.html"></div>
     
     <div id="imgContainer" class="imgContainer"></div>
+
+    <div id="imgBig" class="imgBig d-none" onclick="closeImg(event)">
+        <div class="arrow-left" onclick="left()">
+            <img src="img/arrow-left.png" alt="leftArrow">
+        </div>
+        <img id="bigImage" src="" alt="bigImage" class="bigImage" onclick="closeImg(event)">
+        <div class="arrow-right" onclick="right()">
+            <img src="img/arrow-right.png" alt="rightArrow">
+        </div>
+    </div>
      
 </body>
 </html>
