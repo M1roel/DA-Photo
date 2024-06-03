@@ -14,9 +14,8 @@ function load() {
 
 function closeImg(event) {
   const clickedOnBigImage = event.target.id === 'bigImage';
-  const clickedOnImgBigContainer = event.currentTarget.id === 'imgBig';
-  
-  if (clickedOnBigImage || clickedOnImgBigContainer) {
+
+  if (clickedOnBigImage) {
     const imgBigContainer = document.getElementById("imgBig");
     imgBigContainer.classList.add("d-none");
   }
@@ -37,6 +36,17 @@ function imgContainer() {
   imgContainerElement.innerHTML = "";
   load();
 }
+
+
+function left() {
+  console.log('Click left');
+}
+
+
+function right() {
+  console.log('Click right');  
+}
+
 
 
 function render() {
