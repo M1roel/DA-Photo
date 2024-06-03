@@ -14,8 +14,9 @@ function load() {
 
 function closeImg(event) {
   const clickedOnBigImage = event.target.id === 'bigImage';
+  const clickedOnImgBigContainer = event.currentTarget.id === 'imgBig';
   
-  if (clickedOnBigImage) {
+  if (clickedOnBigImage || clickedOnImgBigContainer) {
     const imgBigContainer = document.getElementById("imgBig");
     imgBigContainer.classList.add("d-none");
   }
