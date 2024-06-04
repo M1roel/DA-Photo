@@ -1,6 +1,6 @@
 function load() {
-  const imgContainerElement = document.getElementById("imgContainer");
-  imgContainerElement.innerHTML = "";
+  const imgContainerElement = document.getElementById('imgContainer');
+  imgContainerElement.innerHTML = '';
   for (let i = 0; i < images.length; i++) {
     const img = images[i];
     imgContainerElement.innerHTML += `
@@ -59,24 +59,24 @@ function closeImg(event) {
   const clickedOnBigImage = event.target.id === 'bigImage';
 
   if (clickedOnBigImage) {
-    const imgBigContainer = document.getElementById("imgBig");
-    imgBigContainer.classList.add("d-none");
+    const imgBigContainer = document.getElementById('imgBig');
+    imgBigContainer.classList.add('d-none');
   }
 }
 
 
 function openImage(imgSrc) {
-  const imgBigContainer = document.getElementById("imgBig");
-  const imgElement = document.getElementById("bigImage");
+  const imgBigContainer = document.getElementById('imgBig');
+  const imgElement = document.getElementById('bigImage');
 
   imgElement.src = imgSrc;
-  imgBigContainer.classList.remove("d-none");
+  imgBigContainer.classList.remove('d-none');
 }
 
 
 function imgContainer() {
-  let imgContainerElement = document.getElementById("imgContainer");
-  imgContainerElement.innerHTML = "";
+  let imgContainerElement = document.getElementById('imgContainer');
+  imgContainerElement.innerHTML = '';
   load();
 }
 
@@ -86,6 +86,6 @@ function render() {
 }
 
 
-document.addEventListener("DOMContentLoaded", (event) => {
+document.addEventListener('DOMContentLoaded', (event) => {
   render();
 });
