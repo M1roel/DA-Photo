@@ -37,7 +37,8 @@
   width: auto;
   max-width: 360px;
   height: 200px;
-  object-fit: cover;
+  object-fit: cover;  
+  cursor: pointer;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 
@@ -71,15 +72,10 @@
 .arrow-left img,
 .arrow-right img {
   height: 40px;
-  width: 40px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  width: 40px;  
+  cursor: pointer;
 }
 
-.arrow-left:hover img,
-.arrow-right:hover img {
-  opacity: 1;
-}
 
 .arrow-left {
   left: 10px;

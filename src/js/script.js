@@ -61,6 +61,8 @@ function closeImg(event) {
   if (clickedOnBigImage) {
     const imgBigContainer = document.getElementById('imgBig');
     imgBigContainer.classList.add('d-none');
+
+    document.body.style.overflow = 'auto';
   }
 }
 
@@ -71,6 +73,8 @@ function openImage(imgSrc) {
 
   imgElement.src = imgSrc;
   imgBigContainer.classList.remove('d-none');
+
+  document.body.style.overflow = 'hidden';
 }
 
 
@@ -81,11 +85,7 @@ function imgContainer() {
 }
 
 
-function render() {
+function init() {
+  includeHTML();
   imgContainer();
 }
-
-
-document.addEventListener('DOMContentLoaded', (event) => {
-  render();
-});
