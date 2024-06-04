@@ -12,12 +12,23 @@ function load() {
 }
 
 
+function getRelativeSrc(fullSrc) {
+  let relativeSrc;
+  if (fullSrc.includes('/public/')) {
+    relativeSrc = fullSrc.split('/public/')[1];
+  } else {
+    relativeSrc = fullSrc;
+  }
+  return relativeSrc;
+}
+
+
 function left() {
   const currentSrc = document.getElementById('bigImage').src;  
-  const relativeSrc = currentSrc.replace(window.location.origin + '/public/', '');
+  const relativeSrc = getRelativeSrc(currentSrc);
   
   let position = images.indexOf(relativeSrc);
-  
+
   if (position === 0) {
     position = images.length - 1;
   } else {
@@ -27,9 +38,10 @@ function left() {
   openImage(images[position]);
 }
 
+
 function right() {
   const currentSrc = document.getElementById('bigImage').src;
-  const relativeSrc = currentSrc.replace(window.location.origin + '/public/', '');
+  const relativeSrc = getRelativeSrc(currentSrc);
   
   let position = images.indexOf(relativeSrc);
 
